@@ -90,6 +90,13 @@ gst_videoscaleratio_sink_event (GstPad *pad, GstObject *parent, GstEvent *event)
             info.width = filter->width;
         }
 
+        if ((info.width % 2) != 0) {
+            info.width++;
+        }
+        if ((info.height % 2) != 0) {
+            info.height++;
+        }
+
         GstCaps *new_caps = gst_caps_copy(caps);
         gst_caps_set_simple (new_caps, "width", G_TYPE_INT, info.width, NULL);
         gst_caps_set_simple (new_caps, "height", G_TYPE_INT, info.height, NULL);
