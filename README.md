@@ -16,7 +16,7 @@ While a pipeline with the native `videoscale` needs to know in advantage the siz
 gst-launch-1.0 \
 videotestsrc ! video/x-raw,width=1280,height=720 \
 ! videoscale \
-! "video/x-raw,width=1080,height=1080" \
+! "video/x-raw,height=1080" \
 ! xvimagesink
 ```
 
