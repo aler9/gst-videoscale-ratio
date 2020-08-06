@@ -37,3 +37,7 @@ meson --prefix=/usr build \
 && ninja \
 && sudo ninja install
 ```
+
+## Usage
+
+Use the filter `videoscaleratio` and set the `width` parameter or the `height` parameter with the desired width or a height; the other size will be set automatically.
