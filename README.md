@@ -1,5 +1,5 @@
 
-# gst-video-scale-ratio
+# gst-videoscale-ratio
 
 This is a GStreamer filter that allows to resize a video and keep its aspect ratio.
 
