@@ -11,7 +11,7 @@ videotestsrc ! video/x-raw,width=1280,height=720 \
 ! xvimagesink
 ```
 
-While a pipeline with the native `videoscale` needs to know in advantage the size of the output video, that is either fixed or inherited from the input video, resulting in a wrong aspect ratio:
+While a pipeline with the native `videoscale` needs to know in advantage the size of the output video, that is either fixed or inherited from the input video. For instance, this will produce a `1280x1080` video:
 ```sh
 gst-launch-1.0 \
 videotestsrc ! video/x-raw,width=1280,height=720 \
