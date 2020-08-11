@@ -11,7 +11,7 @@ videotestsrc ! video/x-raw,width=1280,height=720 \
 ! xvimagesink
 ```
 
-While a pipeline with the native `videoscale` needs to know in advantage the size of the output video, that is either fixed or inherited from the input video. For instance, this will produce a `1280x1080` video:
+A pipeline with the native `videoscale` needs to know in advantage the size of the output video, that is either fixed or inherited from the input video. For instance, this will produce a `1280x1080` video, with the wrong aspect ratio:
 ```sh
 gst-launch-1.0 \
 videotestsrc ! video/x-raw,width=1280,height=720 \
@@ -24,7 +24,7 @@ videotestsrc ! video/x-raw,width=1280,height=720 \
 
 Install build dependencies:
 ```
-apt install -y --no-install-recommends \
+sudo apt install -y --no-install-recommends \
 gcc \
 meson \
 libgstreamer-plugins-base1.0-dev
