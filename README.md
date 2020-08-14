@@ -40,4 +40,4 @@ meson --prefix=/usr build \
 
 ## Usage
 
-Use the filter `videoscaleratio` and set the `width` parameter or the `height` parameter with the desired width or a height; the other size will be set automatically.
+Use the filter `videoscaleratio` and set the `width` parameter or the `height` parameter with the desired width or height; the other size will be set automatically.

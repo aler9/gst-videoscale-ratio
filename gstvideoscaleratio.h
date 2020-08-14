@@ -8,6 +8,7 @@
 #include "config.h"
 
 G_BEGIN_DECLS
+/* */
 #define GST_TYPE_VIDEOSCALERATIO \
     (gst_videoscaleratio_get_type ())
 #define GST_VIDEOSCALERATIO(obj) \
@@ -32,4 +33,5 @@ typedef struct
 } GstVideoScaleRatioClass;
 
 G_END_DECLS
+/* */
 #endif /* __GST_VIDEOSCALERATIO_H__ */

@@ -110,6 +110,8 @@ gst_videoscaleratio_sink_event (GstPad * pad, GstObject * parent,
 static void
 gst_videoscaleratio_init (GstVideoScaleRatio * filter)
 {
+  GstElement *element = GST_ELEMENT (filter);
+
   filter->videoscale = gst_element_factory_make ("videoscale", NULL);
   g_object_set (G_OBJECT (filter->videoscale), "add-borders", FALSE, NULL);
 
@@ -127,7 +129,7 @@ gst_videoscaleratio_init (GstVideoScaleRatio * filter)
   gst_object_unref (pad);
   gst_pad_set_event_function (filter->sinkpad, gst_videoscaleratio_sink_event);
   gst_object_unref (tmpl);
-  gst_element_add_pad (GST_ELEMENT (filter), filter->sinkpad);
+  gst_element_add_pad (element, filter->sinkpad);
 
   // link capsfilter to srcpad
   tmpl = gst_static_pad_template_get (&src_factory);
@@ -135,7 +137,7 @@ gst_videoscaleratio_init (GstVideoScaleRatio * filter)
   filter->srcpad = gst_ghost_pad_new_from_template ("src", pad, tmpl);
   gst_object_unref (pad);
   gst_object_unref (tmpl);
-  gst_element_add_pad (GST_ELEMENT (filter), filter->srcpad);
+  gst_element_add_pad (element, filter->srcpad);
 }
 
 static gboolean
