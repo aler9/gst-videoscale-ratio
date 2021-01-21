@@ -1,7 +1,6 @@
 
 #include "gstvideoscaleratio.h"
 
-
 #define gst_videoscaleratio_parent_class parent_class
 G_DEFINE_TYPE (GstVideoScaleRatio, gst_videoscaleratio, GST_TYPE_BIN);
 
