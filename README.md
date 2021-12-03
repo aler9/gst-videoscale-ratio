@@ -4,6 +4,7 @@
 This is a GStreamer filter that allows to resize a video and keep its aspect ratio.
 
 This pipeline will produce a `1920x1080` video:
+
 ```sh
 gst-launch-1.0 \
 videotestsrc ! video/x-raw,width=1280,height=720 \
@@ -12,6 +13,7 @@ videotestsrc ! video/x-raw,width=1280,height=720 \
 ```
 
 A pipeline with the native `videoscale` needs to know in advantage the size of the output video, that is either fixed or inherited from the input video. For instance, this will produce a `1280x1080` video, with the wrong aspect ratio:
+
 ```sh
 gst-launch-1.0 \
 videotestsrc ! video/x-raw,width=1280,height=720 \
@@ -23,6 +25,7 @@ videotestsrc ! video/x-raw,width=1280,height=720 \
 ## Installation
 
 Install build dependencies:
+
 ```
 sudo apt install -y --no-install-recommends \
 gcc \
@@ -31,6 +34,7 @@ libgstreamer-plugins-base1.0-dev
 ```
 
 Compile and install:
+
 ```
 meson --prefix=/usr build \
 && cd build \
